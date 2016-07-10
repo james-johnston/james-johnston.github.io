@@ -6,7 +6,7 @@ new (function() {
       [' ', 'ONE: pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
       [' ', 'ONE: digital pin %m.pin get', 'getDigital', '1'],
       [' ', 'ONE: pwm pin %m.ppin get', 'getPwm', '1'],
-      [' ', 'set ip address', 'setIP', '192.168.2.102'],
+      [' ', 'set ip address %s', 'setIP', '192.168.2.102'],
       ['r', 'get ip address', 'getIP']
     ],
     'menus': {
