@@ -20,7 +20,7 @@ new (function() {
 	
 	var descriptor = {
 		blocks: [
-			[' ', 'Load extension %s', loadExtension, '']
+			[' ', 'Load extension %s', 'loadExtension', '']
 		]
 	};
 	
