@@ -1,13 +1,31 @@
 new (function() {
   var ext = this;
+ 
+	  
+	var params = window.location.search.replace(/^\?|\/$/g, '');
+	var sparams = parms.split('&');
+	var name = '';
+	var ip = '';
+	$.each(sparams, function(index, element) {
+		var p = element.split('=');
+		if(p.length > 1) {
+			if(p[0] == 'ip') {
+				ip = p[1];
+			}
+			else if(p[0] == 'name') {
+				name = p[1];
+			}
+		}
+	});
+  
   var descriptor = {
     blocks: [
-      [' ', 'ONE: digital pin %m.pin setting %m.dsetting', 'setDigital', '1', 'off'],
-      [' ', 'ONE: pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
-      [' ', 'ONE: digital pin %m.pin get', 'getDigital', '1'],
-      [' ', 'ONE: pwm pin %m.ppin get', 'getPwm', '1'],
-      [' ', 'set ip address %s', 'setIP', '192.168.2.102'],
-      ['r', 'get ip address', 'getIP']
+      [' ', name + ': digital pin %m.pin setting %m.dsetting', 'setDigital', '1', 'off'],
+      [' ', name + ': pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
+      [' ', name + ': digital pin %m.pin get', 'getDigital', '1'],
+      [' ', name + ': pwm pin %m.ppin get', 'getPwm', '1'],
+      [' ', name + ': set ip address %s', 'setIP', '192.168.2.102'],
+      ['r', name + ': get ip address', 'getIP']
     ],
     'menus': {
       'pin': ['1', '2', '3'],
