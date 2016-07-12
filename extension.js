@@ -13,6 +13,8 @@ var scriptSource = (function() {
 }());
   
   	var myScript = scriptSource();
+  	
+  	myScript = document.currentScript.src;
  
 	  
 	var params = myScript.src;
