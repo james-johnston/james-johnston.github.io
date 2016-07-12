@@ -31,5 +31,8 @@ new (function() {
     ext.loadExtension = function(url) {
     	ScratchExtensions.loadExternalJS(url);
     }
+    
+    ext._shutdown = function() {};
 	
+
 ScratchExtensions.register('LOADER', descriptor, ext);})();
