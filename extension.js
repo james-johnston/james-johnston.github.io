@@ -1,22 +1,25 @@
 new (function() {
-  var ext = this;
+	var ext = this;
  
+ 	var getUrlParameter = function getUrlParameter(sParam) {
+	    var sPageURL = decodeURIComponent(document.currentScript.src),
+	        sURLVariables = sPageURL.split('&'),
+	        sParameterName,
+	        i;
+	
+	    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
+	
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : sParameterName[1];
+	        }
+	    }
+	};
 	  
-	var params = document.currentScript.src.replace(/^\?|\/$/g, '');
-	var sparams = params.split('&');
-	var name = '';
-	var ip = '';
-	$.each(sparams, function(index, element) {
-		var p = element.split('=');
-		if(p.length > 1) {
-			if(p[0] == 'ip') {
-				ext.ip = p[1];
-			}
-			else if(p[0] == 'name') {
-				ext.name = p[1];
-			}
-		}
-	});
+	var url = document.currentScript.src; //.replace(/^\?|\/$/g, '');
+
+	var name = getUrlParameter('name');
+	var ip = getUrlParameter('ip');
 	
 	console.log('name ' + ext.name);
 	console.log('ip ' + ext.ip);
