@@ -18,6 +18,20 @@ new (function() {
 		}
 	});
 	
+	var descriptor = {
+		blocks: [
+			[' ', 'Load extension %s', loadExtension, '']
+		]
+	};
+	
+	ext._getStatus = function() {
+        return {status: 2, msg: 'Ready'};
+    };
+    
+    ext.loadExtension = function(url) {
+    	ScratchExtensions.loadExternalJS(url);
+    }
+	
 	/*
   
   var descriptor = {
