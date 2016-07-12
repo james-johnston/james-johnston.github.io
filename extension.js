@@ -1,9 +1,7 @@
 new (function() {
   var ext = this;
   
-  	var scripts = document.getElementsByTagName('script');
-	var index = scripts.length - 1;
-	var myScript = scripts[index];
+  	var myScript = $('script[src$="/extension.js"]').attr('src');
  
 	  
 	var params = myScript.src;
