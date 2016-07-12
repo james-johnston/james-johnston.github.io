@@ -16,7 +16,7 @@ new (function() {
 	    }
 	};
 	  
-	var url = document.currentScript.src; //.replace(/^\?|\/$/g, '');
+	var url = document.currentScript.src.split("?")[0];
 
 	var name = getUrlParameter('name');
 	var ip = getUrlParameter('ip');
