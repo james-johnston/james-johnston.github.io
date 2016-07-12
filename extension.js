@@ -26,10 +26,10 @@ new (function() {
 	
 	var descriptor = {
     blocks: [
-      [' ', name + ': digital pin %m.pin setting %m.dsetting', 'setDigital', '1', 'off'],
-      [' ', name + ': pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
-      [' ', name + ': digital pin %m.pin get', 'getDigital', '1'],
-      [' ', name + ': pwm pin %m.ppin get', 'getPwm', '1']
+      [' ', ext.name + ': digital pin %m.pin setting %m.dsetting', 'setDigital', '1', 'off'],
+      [' ', ext.name + ': pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
+      [' ', ext.name + ': digital pin %m.pin get', 'getDigital', '1'],
+      [' ', ext.name + ': pwm pin %m.ppin get', 'getPwm', '1']
     ],
     'menus': {
       'pin': ['1', '2', '3'],
@@ -90,5 +90,7 @@ new (function() {
 		});
 	};
 	
-ScratchExtensions.register(ext.name, descriptor, ext);})();
+	ScratchExtensions.register(ext.name, descriptor, ext);
+
+})();
 
