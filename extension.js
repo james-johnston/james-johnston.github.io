@@ -19,22 +19,6 @@ new (function() {
 	});
 	
 	var descriptor = {
-		blocks: [
-			[' ', 'Load extension %s', 'loadExtension', '']
-		]
-	};
-	
-	ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
-    };
-    
-    ext.loadExtension = function(url) {
-    	ScratchExtensions.loadExternalJS(url);
-    }
-	
-	/*
-  
-  var descriptor = {
     blocks: [
       [' ', name + ': digital pin %m.pin setting %m.dsetting', 'setDigital', '1', 'off'],
       [' ', name + ': pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
@@ -106,5 +90,6 @@ new (function() {
 			}
 		});
 	};
-	*/
-ScratchExtensions.register('LOADER', descriptor, ext);})();
+	
+ScratchExtensions.register(name, descriptor, ext);})();
+
