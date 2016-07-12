@@ -1,8 +1,12 @@
 new (function() {
   var ext = this;
+  
+  	var scripts = document.getElementsByTagName('script');
+	var index = scripts.length - 1;
+	var myScript = scripts[index];
  
 	  
-	var params = window.location.search.replace(/^\?|\/$/g, '');
+	var params = myScript.src;
 	var sparams = params.split('&');
 	var name = '';
 	var ip = '';
@@ -10,22 +14,23 @@ new (function() {
 		var p = element.split('=');
 		if(p.length > 1) {
 			if(p[0] == 'ip') {
-				ip = p[1];
+				ext.ip = p[1];
 			}
 			else if(p[0] == 'name') {
-				name = p[1];
+				ext.name = p[1];
 			}
 		}
 	});
+	
+	console.log('name ' + ext.name);
+	console.log('ip ' + ext.ip);
 	
 	var descriptor = {
     blocks: [
       [' ', name + ': digital pin %m.pin setting %m.dsetting', 'setDigital', '1', 'off'],
       [' ', name + ': pwm pin %m.ppin setting %n', 'setPwm', '1', '100'],
       [' ', name + ': digital pin %m.pin get', 'getDigital', '1'],
-      [' ', name + ': pwm pin %m.ppin get', 'getPwm', '1'],
-      [' ', name + ': set ip address %s', 'setIP', '192.168.2.102'],
-      ['r', name + ': get ip address', 'getIP']
+      [' ', name + ': pwm pin %m.ppin get', 'getPwm', '1']
     ],
     'menus': {
       'pin': ['1', '2', '3'],
@@ -34,17 +39,12 @@ new (function() {
      },
     url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
   };
-  ext.ip = '';
+
   ext._shutdown = function() {};
   ext._getStatus = function() {
     return {status: 2, msg: 'Device connected'};
   };
-  ext.setIP = function(newIP) {
-    ext.ip = newIP;
-  }
-  ext.getIP = function() {
-    return ext.ip;
-  }
+
   ext.getPwm = function(pin) {
   };
   ext.setPwm = function(pin, setting) {
@@ -52,7 +52,7 @@ new (function() {
     if(pin == 2) {
       p = 5;
     }
-    var url = 'http://192.168.0.4/gpio' + p + '/' + setting;
+    var url = 'http://' + ext.ip + '/gpio' + p + '/' + setting;
     $.ajax({
       type: 'POST',
       url: url,
@@ -81,7 +81,7 @@ new (function() {
 	      p = 14;
 	    }
 	    p = 2;
-	    var url = 'http://192.168.0.4/gpio' + p + '/' + s; 
+	    var url = 'http://' + ext.ip + '/gpio' + p + '/' + s; 
 		$.ajax({
 			type: 'POST', 
 			url: url,
@@ -91,5 +91,5 @@ new (function() {
 		});
 	};
 	
-ScratchExtensions.register(name, descriptor, ext);})();
+ScratchExtensions.register(ext.name, descriptor, ext);})();
 
