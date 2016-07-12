@@ -1,11 +1,8 @@
 new (function() {
   var ext = this;
-
-  	
-  	var myScript = document.currentScript.src;
  
 	  
-	var params = myScript.src;
+	var params = document.currentScript.src.replace(/^\?|\/$/g, '');
 	var sparams = params.split('&');
 	var name = '';
 	var ip = '';
