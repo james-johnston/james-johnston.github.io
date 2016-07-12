@@ -1,20 +1,8 @@
 new (function() {
   var ext = this;
-  
-var scriptSource = (function() {
-    var scripts = document.getElementsByTagName('script'),
-        script = scripts[scripts.length - 1];
 
-    if (script.getAttribute.length !== undefined) {
-        return script.getAttribute('src')
-    }
-
-    return script.getAttribute('src', 2)
-}());
-  
-  	var myScript = scriptSource();
   	
-  	myScript = document.currentScript.src;
+  	var myScript = document.currentScript.src;
  
 	  
 	var params = myScript.src;
