@@ -3,7 +3,7 @@ new (function() {
  
 	  
 	var params = window.location.search.replace(/^\?|\/$/g, '');
-	var sparams = parms.split('&');
+	var sparams = params.split('&');
 	var name = '';
 	var ip = '';
 	$.each(sparams, function(index, element) {
@@ -17,6 +17,8 @@ new (function() {
 			}
 		}
 	});
+	
+	/*
   
   var descriptor = {
     blocks: [
@@ -61,31 +63,34 @@ new (function() {
       }
     });
   };
-  ext.getDigital = function(pin) {
-  };
-  ext.setDigital = function(pin, setting) {
-    var s = 1;
-    if(setting == 'off') {
-      s = 0;
-    }
-    var p = 12;
-    if(pin == 1) {
-      p = 12;
-    }
-    else if(pin == 2) {
-      p = 13;
-    }
-    else if(pin == 3) {
-      p = 14;
-    }
-    p = 2;
-    var url = 'http://192.168.0.4/gpio' + p + '/' + s; 
-$.ajax({
-type: 'POST', 
-url: url,
-async: false,
-success: function(response) {
-}
-});
-};
-ScratchExtensions.register('ONE', descriptor, ext);})();
+  
+  	ext.getDigital = function(pin) {
+	};
+	
+	ext.setDigital = function(pin, setting) {
+	    var s = 1;
+	    if(setting == 'off') {
+	      s = 0;
+	    }
+	    var p = 12;
+	    if(pin == 1) {
+	      p = 12;
+	    }
+	    else if(pin == 2) {
+	      p = 13;
+	    }
+	    else if(pin == 3) {
+	      p = 14;
+	    }
+	    p = 2;
+	    var url = 'http://192.168.0.4/gpio' + p + '/' + s; 
+		$.ajax({
+			type: 'POST', 
+			url: url,
+			async: false,
+			success: function(response) {
+			}
+		});
+	};
+	*/
+ScratchExtensions.register('LOADER', descriptor, ext);})();
