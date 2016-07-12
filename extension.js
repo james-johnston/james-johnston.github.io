@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
  
  	var getUrlParameter = function getUrlParameter(sParam) {
-	    var sPageURL = decodeURIComponent(document.currentScript.src),
+	    var sPageURL = decodeURIComponent(document.currentScript.src.split("?")[1]);,
 	        sURLVariables = sPageURL.split('&'),
 	        sParameterName,
 	        i;
