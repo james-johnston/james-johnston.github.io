@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
  
  	var getUrlParameter = function getUrlParameter(sParam) {
-	    var sPageURL = decodeURIComponent(document.currentScript.src.split("?")[1]);,
+	    var sPageURL = decodeURIComponent(document.currentScript.src.split("?")[1]),
 	        sURLVariables = sPageURL.split('&'),
 	        sParameterName,
 	        i;
@@ -16,10 +16,10 @@ new (function() {
 	    }
 	};
 	  
-	var url = document.currentScript.src.split("?")[0];
+	//var url = document.currentScript.src.split("?")[0];
 
-	var name = getUrlParameter('name');
-	var ip = getUrlParameter('ip');
+	ext.name = getUrlParameter('name');
+	ext.ip = getUrlParameter('ip');
 	
 	console.log('name ' + ext.name);
 	console.log('ip ' + ext.ip);
