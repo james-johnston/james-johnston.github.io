@@ -64,7 +64,6 @@ new (function() {
   	ext.getDigital = function(pin) {
 	};
 	
-<<<<<<< HEAD
 	ext.setDigital = function(pin, setting) {
 	    var s = 1;
 	    if(setting == 'off') {
@@ -82,30 +81,6 @@ new (function() {
 	    }
 	    p = 2;
 	    var url = 'http://' + ext.ip + '/gpio' + p + '/' + s; 
-=======
-	ext._shutdown = function() {};
-	
-	ext._getStatus = function() {
-    	return {status:2, msg:'Ready'};
-  	};
-  	
-  	ext.getPwm = function(pin) {
-  	};
-  	
-  	ext.setPwm = function(pin, setting) {
-  	};
-  	
-  	ext.getDigital = function(pin) {
-  	};
-  	
-  	ext.setDigital = function(setting, url) {
-  		var s = 0;
-  		if(setting == 'off') {
-  			s = 1;
-  		}
-    	var url = 'http://%%%%%%/gpio2/' + s; 
-		console.log('setting' + setting);
->>>>>>> branch 'master' of https://github.com/james-johnston/httpd.git
 		$.ajax({
 			type: 'POST', 
 			url: url,
@@ -118,4 +93,3 @@ new (function() {
 	ScratchExtensions.register(ext.name, descriptor, ext);
 
 })();
-
