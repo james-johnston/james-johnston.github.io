@@ -19,7 +19,6 @@ new (function() {
 	ext.name = getUrlParameter('name');
 	
 	console.log('name ' + ext.name);
-	console.log('ip ' + ext.ip);
 	
 	var descriptor = {
     blocks: [
