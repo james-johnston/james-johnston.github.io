@@ -79,7 +79,6 @@ new (function() {
 	    else if(pin == 3) {
 	      p = 14;
 	    }
-	    p = 2;
 	    var url = 'http://' + ext.ip + '/gpio' + p + '/' + s; 
 		$.ajax({
 			type: 'POST', 
