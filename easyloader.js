@@ -28,7 +28,7 @@ new (function() {
     		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=LADYBIRD');
     	}
     	else {
-    		ScratchExtensions.loadExternalJS(name);
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name='+ name);
     	}
     }
     
