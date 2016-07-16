@@ -51,10 +51,10 @@ new (function() {
     $.ajax({
       type: 'POST',
       url: url,
-      async: false,
       success: function(response) {
       }
     });
+    setTimeout(function(){ }, 10);
   };
   
   	ext.getDigital = function(pin) {
@@ -79,10 +79,10 @@ new (function() {
 		$.ajax({
 			type: 'POST', 
 			url: url,
-			async: false,
 			success: function(response) {
 			}
 		});
+		setTimeout(function(){ }, 10);
 	};
 	
 	ScratchExtensions.register(ext.name, descriptor, ext);
