@@ -17,15 +17,15 @@ new (function() {
     
     ext.loadExtension = function(name) {
     	if(name == 'ALL') {
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=SUN');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=CLOUD');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=MOON');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=CASTLE');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=TREE');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=DESERT');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=FISH');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=CAT');
-    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=LADYBIRD');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=SUN');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=CLOUD');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=MOON');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=CASTLE');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=TREE');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=DESERT');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=FISH');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=CAT');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension2.js?name=LADYBIRD');
     	}
     	else {
     		ScratchExtensions.loadExternalJS(name);
