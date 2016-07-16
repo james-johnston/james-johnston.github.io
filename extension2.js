@@ -50,6 +50,7 @@ new (function() {
     var url = 'http://' + ext.name + '/gpio' + p + '/' + setting;
     $.ajax({
       type: 'POST',
+      async: false,
       url: url,
       success: function(response) {
       }
@@ -79,10 +80,10 @@ new (function() {
 		$.ajax({
 			type: 'POST', 
 			url: url,
+			async: false,
 			success: function(response) {
 			}
 		});
-		setTimeout(function(){ }, 10);
 	};
 	
 	ScratchExtensions.register(ext.name, descriptor, ext);
