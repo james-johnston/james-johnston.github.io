@@ -16,7 +16,20 @@ new (function() {
     };
     
     ext.loadExtension = function(name) {
-    	ScratchExtensions.loadExternalJS(name);
+    	if(name == 'ALL') {
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=SUN');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=CLOUD');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=MOON');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=CASTLE');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=TREE');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=DESERT');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=FISH');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=CAT');
+    		ScratchExtensions.loadExternalJS('https://james-johnston.github.io/extension.js?name=LADYBIRD');
+    	}
+    	else {
+    		ScratchExtensions.loadExternalJS(name);
+    	}
     }
     
     ext._shutdown = function() {};
