@@ -77,10 +77,10 @@ new (function() {
 	      p = 14;
 	    }
 	    var url = 'http://' + ext.name + '/gpio' + p + '/' + s; 
+	    	setTimeout(function(){  }, 300);
 		$.ajax({
 			type: 'POST', 
 			url: url,
-			async: false,
 			success: function(response) {
 			}
 		});
