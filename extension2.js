@@ -50,7 +50,6 @@ new (function() {
     var url = 'http://' + ext.name + '/gpio' + p + '/' + setting;
     $.ajax({
       type: 'POST',
-      async: false,
       url: url,
       success: function(response) {
       }
@@ -77,7 +76,6 @@ new (function() {
 	      p = 14;
 	    }
 	    var url = 'http://' + ext.name + '/gpio' + p + '/' + s; 
-	    	setTimeout(function(){  }, 300);
 		$.ajax({
 			type: 'POST', 
 			url: url,
