@@ -32,7 +32,7 @@ new (function() {
       'dsetting': ['on', 'off'],
       'ppin': ['1', '2']
      },
-    url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
+    url: 'http://www.warwick.ac.uk/tilesfortales'
   };
 
   ext._shutdown = function() {};
