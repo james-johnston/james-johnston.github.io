@@ -8,7 +8,7 @@ new (function() {
 		'menus': {
       'name': ['SUN', 'CLOUD', 'MOON', 'CASTLE', 'TREE', 'DESERT', 'FISH', 'CAT', 'LADYBIRD', 'ALL']
     },
-    url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
+    url: 'http://www.warwick.ac.uk/tilesfortales'
 	};
 	
 	ext._getStatus = function() {
